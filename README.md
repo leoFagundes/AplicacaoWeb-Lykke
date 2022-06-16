@@ -9,5 +9,7 @@ em seguida rode o arquivo Python (main.py), vá para o seu navegador e digite: "
 Agora já é póssível navegar pelo site.
 
 Escolhemos o tema monocromático azul claro como na imagem abaixo:
-
-![Imagem da tela inicial](imagens_readme/home.png)
+<br><br>
+<div align='center'>
+    <img src='./imagens_readme/home.png' alt='Imagem Home' width='500px' heigth='400px'/>
+</div>
