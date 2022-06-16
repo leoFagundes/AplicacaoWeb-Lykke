@@ -6,8 +6,8 @@ Utilizei apenas Python (Flask), HTML, CSS, SQL e JavaScript, é um site com obje
 
 Disponibilizei o arquivo em SQL, para iniciar o código basta rodar o banco de dados em algum SQL interpreter (utilizei o MySQL Workbench),
 em seguida rode o arquivo Python (main.py), vá para o seu navegador e digite: "localhost:5000/". 
-Agorajá é póssível navegar pelo site.
+Agora já é póssível navegar pelo site.
 
 Escolhemos o tema monocromático azul claro como na imagem abaixo:
 
-![Imagem da tela inicial](../Aplicacao_WEB-LYKKE/imagens_readme/home.png)
+![Imagem da tela inicial](imagens_readme/home.png)
