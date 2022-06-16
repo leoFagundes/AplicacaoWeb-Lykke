@@ -10,6 +10,4 @@ Agora já é póssível navegar pelo site.
 
 Escolhemos o tema monocromático azul claro como na imagem abaixo:
 
-<div align="center">
-<img src="../Aplicacao_WEB-LYKKE/imagens_readme/home.png">
-</div>
+![Imagem da tela inicial](../Aplicacao_WEB-LYKKE/imagens_readme/home.png)
