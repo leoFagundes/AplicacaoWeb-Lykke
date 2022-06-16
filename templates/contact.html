@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logoG">
+                <div class="ImagemLogo"><img src="../static/imagens/logo_teste_3.png" height="80%", width="80%"/></div>
+                <a class="logo" href="/">Lykke</a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/conteudo">Conteúdo</a></li>
+                <li><a href="/contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="subMainContato">
+            <form action="/getContact" method="post" enctype="multipart/form-data">
+                <div class="forms">
+                    <table>
+                        <h3>Escreva sua mensagem abaixo</h3>
+                        <i><p class="opiniao">Sua opinião é muito imporante para nós</p></i>
+                        <tr>
+                            <td><Strong>Nome: </Strong></td>
+                            <td><input class='campoContato' type="text" name="pNome" size="30%" maxlength="50" placeholder="Insira seu nome" required/></td>
+                        </tr>
+                        <tr>
+                            <td><Strong>Email: </Strong></td>
+                            <td><input class='campoContato' type="text" name="pEmail" size="30%" maxlength="50"  placeholder="Informe seu email" required/></td>
+                        </tr>
+                        <tr>
+                            <td><Strong>Mensagem: </Strong></td>
+                            <td><input class='campoContato' type="text" name="pMensagem" size="90%" maxlength="400" placeholder="Digite sua mensagem" required/></td>
+                        </tr>
+                    </table>
+                    <br/>
+                    <input class='botaoContato' type="submit" value="Enviar Mensagem"/>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

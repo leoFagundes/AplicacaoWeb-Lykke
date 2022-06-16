@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <title>alimentação</title>
+   <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="logoG">
+            <div class="ImagemLogo"><img src="../static/imagens/logo_teste_3.png" height="80%", width="80%"/></div>
+            <a class="logo" href="/">Lykke</a>
+        </div>
+        <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/sobre">Sobre</a></li>
+            <li><a href="/conteudo">Conteúdo</a></li>
+            <li><a href="/contact">Contato</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main> 
+    <div class="subMain2">
+      <div class="TituloMain">
+        <h1>Tenha uma alimentação saudável</h1>
+      </div>
+      <u><i><a href="/recomendacaoRestaurantes" style="margin-left: 21%; font-size: 1.4vw;">Clique aqui para conferir nossas recomendações</a></i></u>
+      <div class="containerAlimentacao">
+        <div class="textoAlimentacao">
+          <p>Uma alimentação saudável é fundamental para garantir e melhorar a qualidade de vida de uma pessoa. Isso porque através de uma boa alimentação é possível fornecer bastante energia ao corpo, prevenir doenças, manter o peso corporal saudável e ter um bom desenvolvimento físico.</p>
+          <br>
+          <p>- O que é uma alimentação saudável?</p>
+          <br>
+          <p>Uma alimentação saudável é uma dieta bem equilibrada, que tem como objetivo garantir todos nutrientes, vitaminas e minerais nas proporções adequadas para o bom funcionamento do organismo. É importante que a dieta tenha variedade, equilíbrio, controle de quantidade e  que a qualidade dos alimentos seja boa.</p>
+          <br><br>
+          <P>- O que é uma alimentação não saudável?</p>
+          <br>
+          <p>A alimentação não saudável é aquela em que o organismo consome alimentos ultraprocessados e as comidas de fácil e rápido acesso. São alimentos ricos em sal, gordura e açúcar sem valor nutricional que, quando consumidos em excesso, podem trazer prejuízos ao organismo como o aumento de peso e a manifestação de doenças.</P>
+          <br><br>
+          <h2>Benefícios da alimentação saudável:</h2>
+          <ul class="topicosAlimentacao">
+            <li>Fornece energia ao organismo;</li>
+            <br>
+            <li>Previne doenças;</li>
+            <br>
+            <li>Propicia o crescimento e a renovação dos tecidos do corpo;</li>
+            <br>
+            <li>Melhora o rendimento e a concentração do indivíduo;</li>
+            <br>
+            <li>Regula a produção de hormônios e evita problemas como doenças da tireóide, insônia e infertilidade.</li>
+          </ul>
+        </div>
+        <div class="imagensAlimentacao">
+          <img class="imagemOpcoes" src="../static/imagens_alimentacao/health1.png">
+          <img class="imagemOpcoes" src="../static/imagens_alimentacao/health2.png">
+          <img class="imagemOpcoes" src="../static/imagens_alimentacao/health3.png">
+        </div>
+      </div>
+      <hr/>
+      <table class="columns">
+       <div class="TituloMain">
+          <h1>Estatísticas de alimentação</h1>
+          <i><p>fonte: pesquisa nacional de saúde - IBGE - 2019</p></i>
+        </div>
+       <div class="pagGrafico">
+         <div class="divBarras01" id="divBarras01" ></div>
+         <div class="divBarras02" id="divBarras02" ></div>
+       </div>
+      <hr/>
+      <br/>
+    </div>
+  </main>
+</body>
+</html>
+
+<script type="text/javascript">
+
+   google.charts.load("current", {packages:["corechart"]});
+   google.charts.setOnLoadCallback(drawChart01);
+   google.charts.setOnLoadCallback(drawChart02);
+
+   function drawChart01() {
+     var data = google.visualization.arrayToDataTable([
+       ["intervalo", "Proporção (%)", { role: "style" }]
+       {{ barras_01 | safe }}
+     ]);
+
+      function getValueAt(column, dataTable, row) {
+        return dataTable.getFormattedValue(row, column);
+      }
+
+     var view = new google.visualization.DataView(data);
+     view.setColumns([0, 1, 2]);
+
+     var options = {
+       title: "Consumo recomendado de hortaliças e frutas, inclusive suco (pelo menos 25 vezes na semana)",
+       bar: {groupWidth: "95%"},
+       legend: { position: "none" },
+       width_units: '%'
+     };
+     var chart = new google.visualization.BarChart(document.getElementById("divBarras01"));
+     chart.draw(view, options);
+ }
+
+
+
+ function drawChart02() {
+     var data = google.visualization.arrayToDataTable([
+       ["intervalo", "Proporção (%)", { role: "style" }]
+       {{ barras_02 | safe }}
+     ]);
+
+      function getValueAt(column, dataTable, row) {
+        return dataTable.getFormattedValue(row, column);
+      }
+
+     var view = new google.visualization.DataView(data);
+     view.setColumns([0, 1, 2]);
+
+     var options = {
+       title: "Consumo regular de feijão (cinco ou mais dias da semana)",
+       bar: {groupWidth: "95%"},
+       legend: { position: "none" },
+       width_units: '%'
+     };
+     var chart = new google.visualization.BarChart(document.getElementById("divBarras02"));
+     chart.draw(view, options);
+ }
+
+ </script>

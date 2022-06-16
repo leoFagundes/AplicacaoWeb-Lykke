@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lykke</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logoG">
+                <div class="ImagemLogo"><img src="../static/imagens/logo_teste_3.png" height="80%", width="80%"/></div>
+                <a class="logo" href="/">Lykke</a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/conteudo">Conteúdo</a></li>
+                <li><a href="/contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container1">
+            <div class="text">
+                <h1 class="fraseMotivacional"><i>"Felicidade é questão de bem-estar."</i></h1>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="TituloMain"><h1>Tenha um estilo de vida saudável</h1></div>
+            <div class="textoHome">
+                <p>Viver um estilo de vida saudável é importante para quem quer se sentir melhor e ficar mais saudável à medida que envelhece. No entanto, recebemos uma quantidade tão grande de conselhos todos os dias que pode ser confuso descobrir o que é melhor quando se trata de saúde, e a saúde preventiva pode ser um tópico desconcertante. Diferentes mensagens são transmitidas sobre bem-estar e descobrir quais conselhos seguir pode ser uma luta. Mas viver um estilo de vida saudável não precisa ser complicado.</p>
+                <br>
+                <p>Separamos vários tópicos, recomendações e assuntos para que você consiga ter um estilo de vida mais saudável, você poderá ver todas as vantagens de mudar seus hábitos, alimentações e muitos outros.</p>
+            </div>
+        </div>
+        <hr SIZE=1 WIDTH=84.8%>
+        <div class="container2">
+            <div class="TituloMain"><h1>Confira os conteúdos em destaque</h1></div>
+            <div class="conteudo">
+                <h2>Tenha uma alimentação saudável</h2>
+                <a href="/alimentacao"><img class="imagem" src="../static/imagens/healthfood.jpg"></a>
+            </div>
+            <div class="conteudo">
+                <h2>Pratique exercícios para o seu bem</h2>
+                <a href="/exercicio"><img class="imagem" src="../static/imagens/exercise.jpg"></a>
+            </div>
+            <div class="conteudo">
+                <h2>A importância de ter bons hábitos</h2>
+                <a href="/habitos"><img class="imagem" src="../static/imagens/habits.jpg"></a>
+            </div>
+        </div>
+        
+        <hr SIZE=1 WIDTH=84.8%>
+
+        <div class="container2">
+            <div class="containerGrafico">
+                <div class="TituloMain"><h1>Estatísticas sobre depressão e ansiedade</h1></div>
+                <div class="estatisticasHome">
+                    <p>Segundo pesquisa realizada pela USP, as restrições durante a pandemia e o isolamento social tiveram grande impacto na saúde mental das pessoas.</p>
+                    <br>
+                    <p>De acordo com o estudo, o Brasil lidera o ranking de países que mais tiveram casos de ansiedade e depressão, seguido pela Irlanda e pelos Estados Unidos.</p>
+                    <br>
+                    <p>Devemos estar atentos a esses transtornos e cuidar melhor de nossa saúde física e mental, venha com a gente conferir conteúdos para cuidar de você!</p>
+                </div>
+                <div class="graficoHome" id="columnchart_material" ></div>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="../static/vanilla-tilt.js"> </script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".imagem"));
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.load('visualization', '1', {packages: ['corechart', 'bar']});
+        google.setOnLoadCallback(drawBarColors);
+
+      function drawBarColors() {
+        var data = google.visualization.arrayToDataTable([
+          ['Transtorno', 'Brasil', 'Irlanda', 'Estados Unidos'],
+          ['Depressão', 59, 57, 55],
+          ['Ansiedade', 63, 61, 60]
+        ]);
+
+        console.log(google.visualization.arrayToDataTable);
+
+        var options = {
+          chart: {
+            title: 'Depressão e Ansiedade',
+            subtitle: 'Porcentagem da população com casos durante a pandemia e o isolamento social',
+          },
+          colors: ['#009c3b', '#FF7900', '#002868'],
+          width_units: '%'
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+</body>
+</html>

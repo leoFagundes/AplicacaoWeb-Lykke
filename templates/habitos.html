@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <title>Bóns Hábitos</title>
+   <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="logoG">
+            <div class="ImagemLogo"><img src="../static/imagens/logo_teste_3.png" height="80%", width="80%"/></div>
+            <a class="logo" href="/">Lykke</a>
+        </div>
+        <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/sobre">Sobre</a></li>
+            <li><a href="/conteudo">Conteúdo</a></li>
+            <li><a href="/contact">Contato</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main> 
+    <div class="subMain2">
+        <div class="TituloMain">
+          <h1>A importância de ter bons hábitos</h1>
+        </div>
+        <div class="textoHabitos">
+          <p>Vivemos em um mundo em que tudo está muito acelerado e parece que temos cada vez menos tempo para cuidar de nossa saúde. É importante conseguir reorganizar a rotina e repensar nossas atitudes para introduzir bons hábitos que auxiliam no nosso bem-estar. </p>
+          <br>
+          <p>Em nosso site apresentamos conteúdos sobre alimentação saudável, prática regular de exercícios, importância do lazer, como turbinar nosso sistema imunológico e também dicas e alertas sobre saúde mental. Nesta seção, focaremos em pequenos hábitos que podem melhorar sua disposição sem exigir muito tempo e energia.</p>
+        </div>
+        <div class="opcoesMain">
+          <div class="opcoes">
+              <div class="textoOpcoes">
+                  <p class="TituloOpcoesLazer">1 - Se alongue!</p>
+                  <p class="opcoesLazer">O alongamento não é apenas uma atividade realizada junto aos exercícios, é importante que ao longo do expediente de trabalho ou apenas ao longo do dia, sejam feitos intervalos para alongar as articulações por cerca de 10 a 15 minutos. Basta se levantar da cadeira, caminhar alguns minutos e esticar os membros para já fazer alguma diferença. 
+                    <br>Essa atividade reduz as tensões musculares, aumenta a amplitude dos movimentos e previne lesões, também aumentando a circulação sanguínea e melhorando todos os movimentos corporais.
+                  </p>
+              </div>
+              <img class="imagemOpcoes" src="../static/imagens_habitos/alongamento.jpg">
+          </div>
+          <div class="opcoes">
+              <img class="imagemOpcoes" src="../static/imagens_habitos/banhoFrio.jpg">
+              <div class="textoOpcoes">
+                  <p class="TituloOpcoesLazer">2 - E tomar banhos frios? Pode ser?</p>
+                  <p class="opcoesLazer">Esse é um ponto um pouco polêmico, pois muitas pessoas não conseguem tomar banhos gelados; mas pode trazer grandes benefícios para o corpo. O recomendado é que a água seja ajustada aos poucos até chegar a 20ºC. Essa prática melhora a circulação sanguínea, melhorando o transporte de oxigênio e nutrientes; estimula o sistema imunológico e pode até reduzir os sintomas da depressão.</p>
+              </div>
+          </div>
+          <div class="opcoes">
+              <div class="textoOpcoes">
+                  <p class="TituloOpcoesLazer">3 - Beba água!</p>
+                  <p class="opcoesLazer">A ingestão correta de água traz inúmeros benefícios para sua saúde, como: regulação da temperatura corporal, redução de inchaços, melhora do processo de digestão e da circulação sanguínea, prevenção de prisão de ventre e cãibras, auxílio na eliminação de toxinas e na lubrificação das articulações, além de manter nosso cérebro saudável. Em adição a todos esses fatores proveitosos, a boa hidratação também melhora o aspecto da nossa pele, evitando o surgimento precoce de sinais de envelhecimento. </p>
+              </div>
+              <img class="imagemOpcoes" src="../static/imagens_habitos/drinkWater.jpg">
+          </div>
+        </div>
+        <div class="textoHabitos">
+          <p>Além dessas pequenas dicas, também recomendamos outra muito importante: cultive relacionamentos saudáveis! Como Aristóteles já pregava, o homem é um ser social e necessita de outros membros da espécie. Sendo assim, é essencial que nossos vínculos afetivos estejam dedicados a pessoas que nos façam bem, que compartilhem bons (e ajudem nos maus) momentos e acrescentem positivamente à nossa vivência. </p>
+          <br>
+          <p>Com tudo isso, vai ser possível aliviar uma grande carga das tensões da vida, melhorar a saúde e sorrir mais, já que sorrir é uma ótima dica também para melhorar a imunidade, a qualidade de vida, as relações e a longevidade!</p>
+        </div>
+      <hr/>
+      <div class="TituloMain">
+        <h1>Gráfico - Autoavaliação de saúde</h1>
+        <i><p>fonte: pesquisa nacional de saúde - IBGE - 2019</p></i>
+      </div>
+      <div class="pagGrafico">
+        <div class="textoHabitosGR"><p>O gráfico ao lado traz informações sobre a autoavaliação do estado de saúde da população brasileira. A pesquisa feita contava com uma questão para o indivíduo responder se classificava sua saúde em muito boa, boa, regular, ruim ou muito ruim. Essa percepção sobre a saúde engloba sensações físicas, sociais e psicológicas, trazendo componentes emocionais, de satisfação e bem-estar. Podemos perceber que os jovens brasileiros possuem uma autoavaliação muito positiva, o que vai decaindo à medida que se avança nas faixas etárias. E você? Como você avalia sua saúde?</p></div>
+        <div class="divBarras" id="divBarras">
+      </div>
+   
+      </div>
+      <hr/>
+      <br/>
+    </div>
+  </main>
+</body>
+</html>
+
+<script type="text/javascript">
+   google.charts.load("current", {packages:["corechart"]});
+   google.charts.setOnLoadCallback(drawChart);
+   function drawChart() {
+     var data = google.visualization.arrayToDataTable([
+       ["intervalo", "Proporção (%)", { role: "style" }]
+       {{ barras | safe }}
+     ]);
+
+      function getValueAt(column, dataTable, row) {
+        return dataTable.getFormattedValue(row, column);
+      }
+
+     var view = new google.visualization.DataView(data);
+     view.setColumns([0, 1, 2]);
+
+     var options = {
+       title: "Proporção de Pessoas de 18 Anos ou Mais de Idade com Autoavaliação de Saúde Boa ou Muito Boa",
+       bar: {groupWidth: "95%"},
+       legend: { position: "none" },
+     };
+     var chart = new google.visualization.BarChart(document.getElementById("divBarras"));
+     chart.draw(view, options);
+ }
+ </script>

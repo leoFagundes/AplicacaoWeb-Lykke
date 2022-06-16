@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Físicos</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logoG">
+                <div class="ImagemLogo"><img src="../static/imagens/logo_teste_3.png" height="80%", width="80%"/></div>
+                <a class="logo" href="/">Lykke</a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/conteudo">Conteúdo</a></li>
+                <li><a href="/contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main> 
+        <div class="subMain2">
+            <div class="TituloMain"><h1>As vantagens de praticar exercícios físicos</h1></div>
+            <u><i><a href="/recomendacaoAcademias" style="margin-left: 13%; font-size: 1.4vw;">Clique aqui para conferir nossas recomendações</a></i></u>
+            <div class="textoExercicio">
+                <p>A atividade física regular é uma das coisas mais importantes que você pode fazer pela sua saúde. Ser fisicamente ativo pode melhorar a saúde do cérebro , ajudar a controlar o peso , reduzir o risco de doenças , fortalecer ossos e músculos e melhorar sua capacidade de realizar atividades cotidianas .</p>
+                <br>
+                <p>Doença cardíaca e acidente vascular cerebral são duas das principais causas de morte nos Estados Unidos. Fazer pelo menos 150 minutos por semana de atividade física moderada pode diminuir o risco dessas doenças. Você pode reduzir ainda mais o risco com mais atividade física. A atividade física regular também pode diminuir a pressão arterial e melhorar os níveis de colesterol.</p>
+            </div>
+            <div class="Imagem_Texto">
+                <div class="imagensExercicio">
+                    <img class="imagemOpcoes" src="../static/imagens_exercicio/atividadeFisica.jpg">
+                    <img class="imagemOpcoes" src="../static/imagens_exercicio/atividadeFisica2.jpg">
+                </div>
+                <div class="textSideImage">
+                    <p>Além disso, à medida que envelhece, é importante proteger seus ossos, articulações e músculos – eles sustentam seu corpo e ajudam você a se mover. Manter ossos, articulações e músculos saudáveis ​​pode ajudar a garantir que você seja capaz de realizar suas atividades diárias e ser fisicamente ativo.</p>
+                    <br>
+                    <p>Atividades de fortalecimento muscular, como levantar pesos, podem ajudá-lo a aumentar ou manter sua massa e força muscular. Isso é importante para adultos mais velhos que experimentam redução da massa muscular e força muscular com o envelhecimento. Aumentar lentamente a quantidade de peso e o número de repetições que você faz como parte das atividades de fortalecimento muscular lhe dará ainda mais benefícios, independentemente da sua idade.</p>
+                </div>
+            </div>
+            <div class="beneficiosExercicio">
+                <h2>Confira os principais benefícios do exercício regular: </h2>
+                <br>
+                <ul class="topicosExercicio">
+                    <div>
+                        <li>O exercício pode fazer você se sentir mais feliz</li>
+                        <li>O exercício pode ajudar na perda de peso</li>
+                        <li>O exercício é bom para seus músculos e ossos</li>
+                        <li>O exercício pode aumentar seus níveis de energia</li>
+                        <li>O exercício pode reduzir o risco de doenças crônicas</li>
+                    </div>
+                    <div>
+                        <li>O exercício pode ajudar a saúde da pele</li>
+                        <li>O exercício pode ajudar a saúde e a memória do seu cérebro</li>
+                        <li>O exercício pode ajudar no relaxamento e na qualidade do sono</li>
+                        <li>O exercício pode reduzir a dor</li>
+                        <li>O exercício pode promover uma vida sexual melhor</li>
+                    </div>
+                </ul>
+            </div>
+            <hr/>
+            <div class="TituloMain">
+                <h1>Gráfico - Níveis recomendados de Atividade Física</h1>
+                <i><p>fonte: pesquisa nacional de saúde - IBGE - 2019</p></i>
+            </div>
+            <div class="divExercicioGrafico">
+                <div class="divBarrasExercicio" id="divBarras"></div>
+            </div>
+            <hr/>
+            <br/>
+        </div>
+    </main>
+</body>
+</html>
+
+<script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["intervalo", "Proporção (%)", { role: "style" }]
+        {{ barras_03 | safe }}
+      ]);
+ 
+       function getValueAt(column, dataTable, row) {
+         return dataTable.getFormattedValue(row, column);
+       }
+ 
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1, 2]);
+ 
+      var options = {
+        title: "Proporção de Prática do Nível Recomendado de Atividade Física no Lazer  - fora do âmbito escolar ou trabalho, por mais de 150 minutos para atividade moderada ou por 75 minutos para atividades vigorosas na semana",
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+        width_units: '%',
+      };
+      
+      var chart = new google.visualization.BarChart(document.getElementById("divBarras"));
+      chart.draw(view, options);
+      
+    }
+
+    
+  </script>

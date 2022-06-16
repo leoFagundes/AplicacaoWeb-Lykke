@@ -1,0 +1,710 @@
+
+/*Nav Bar*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.logo {
+    font-size: 1.6vw;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.logoG {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 8%;
+}
+
+.ImagemLogo {
+    width: 8%;
+    height: 3%;
+    object-fit: contain;
+    object-fit: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: linear-gradient(to top, rgb(50, 69, 85),rgb(73, 127, 148));
+    height: 8vh;
+}
+
+.nav-list {
+    margin-right: 8%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-list li {
+    font-size: 1.1vw;
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+/*Main e Home*/
+
+main {
+    background: url("../static/imagens/fundo3.png") no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.container1 {
+    width: 85%;
+    height: 50%;
+    background: url("../static/imagens/PaisagemDesenho.jpg") no-repeat center/100%;
+}
+
+.container2 {
+    width: 85%;
+    height: 60%;
+    background-image: linear-gradient(to right, rgb(50, 69, 85),rgb(96, 168, 197));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: center;
+}
+
+.fraseMotivacional {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2vw;
+    width: 60%;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #000;
+}
+
+.textoHome {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+h1 {
+    font-size: 3.5vw;
+}
+
+.text {
+    width: 40%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin-left: 15%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    font-weight: 1000;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.1em 0.1em #333;
+}
+
+.TituloMain {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 7vh;
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.1em 0.1em #333;
+}
+
+.imagem {
+    margin: 5px;
+    max-width: 100%;
+    height: 260px;
+    width: 330px;
+    object-fit: contain;
+    object-fit: cover;
+    border-radius: 20px; 
+    box-shadow: 3px 3px 3px rgba(34, 33, 33, 0.767);
+}
+
+.conteudo {
+    margin: 3%;
+    text-align: center;
+}
+
+.estatisticasHome {
+    margin-top: 5%;
+    width: 40%;
+    height: 100%;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: 1000;
+    text-shadow: 0.1em 0.1em rgba(41, 40, 40, 0.76);
+}
+
+hr{
+    border-color: #2c6992cb; 
+   }
+
+body {
+    background: url("../static/imagens/fundo3.png") no-repeat center center;
+    background-size: cover;
+}
+
+.subMain {
+    background-image: linear-gradient(to right, rgb(50, 69, 85),rgb(96, 168, 197));
+    height: 92vh;
+    width: 85%;
+}
+
+.subMain2 {
+    background-image: linear-gradient(to right, rgb(50, 69, 85),rgb(96, 168, 197));
+    height: 100%;
+    width: 85%;
+}
+
+.graficoHome {
+    height: 100%;
+    width: 45%;
+    margin-top: 5%;
+    padding: 1%;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgba(41, 40, 40, 0.719); 
+}
+
+.containerGrafico {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 450px;
+    width: 95%;
+    margin-top: 2%;
+    margin-bottom: 20%;
+}
+
+/*Sobre*/
+
+.TituloSobre {
+    width: 25%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.1em 0.1em #333;
+}
+
+.sobreNos {
+    margin-top: 3%;
+    margin-left: 7%;
+    width: 80%;
+}
+
+p {
+    font-size: 1.5vw;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:white;
+}
+
+.TituloFundadores {
+    font-size: 2.5vw;
+    margin-left: 5%;
+    width: 20%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.1em 0.1em #333;
+}
+
+.FotosFundadores {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2%;
+    margin-bottom: 1.5%;
+    flex-wrap: wrap;
+}
+
+.perfil {
+    margin: 5px;
+    max-width: 100%;
+    height: 250px;
+    width: 200px;
+    object-fit: contain;
+    object-fit: cover;
+    border-radius: 10px; 
+    box-shadow: 3px 3px 3px;
+}
+
+/*Contato*/
+
+.subMainContato {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background: rgb(87, 147, 170);
+    height: 65vh;
+    width: 70vw;
+    border-radius: 10px;
+}
+
+.campoContato {
+    box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
+    border: 1px solid white;
+    display: block;
+    padding: 0.2em 0.6em;
+}
+
+.campoContato input:focus {
+    background: rgb(253, 253, 253);
+}
+
+.botaoContato {
+    font-size: 1em;
+    background: rgba(255, 254, 254, 0.959);
+    border: 0;
+    margin-bottom: 1em;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1 pxrgb(0, 0, 0, 0.5);
+}
+
+.campoContato:hover, .botaoContato:hover {
+    background: rgb(200, 219, 238);
+    box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
+    text-shadow: 0;
+}
+
+input {
+    border-radius: 8px;
+}
+
+input[name="pEmail"] {
+    height: 3vh;
+    width: 20vw;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+input[name="pNome"] {
+    height: 3vh;
+    width: 20vw;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+input[name="pMensagem"] {
+    height: 10vh;
+    width: 40vw;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+input[value="Enviar Imagem"] {
+    height: 3vh;
+    
+}
+
+td {
+    color: white;
+    font-size: 120%;
+}
+
+.forms {
+    margin-top: 3%;
+    margin-left: 7%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+h3 {
+    font-size: 3.5vh;
+    color: rgb(255, 255, 255);
+    font-weight: 1000;
+}
+
+.opiniao {
+    width: 100%;
+    font-size: 2vh;
+    margin-left: 1%;
+}
+
+/*Lazer*/
+
+.tituloLazer {
+    margin-left: 6%;
+    width: 50%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.1em 0.1em #333;
+}
+
+.imagensLazer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.textoLazer {
+    margin-top: 4%;
+    margin-left: 9%;
+    margin-bottom: 4%;
+    margin-right: 9%;
+}
+
+/*Lazer ao ar livre e cultural*/
+
+.tituloLazerCultural {
+    margin-top: 1%;
+    margin-left: 4%;
+    width: 95%;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.1em 0.1em #333;
+}
+
+.tituloLazerArLivre {
+    margin-left: 4%;
+    width: 50%;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.1em 0.1em #333;
+}
+
+.textoLazerArLivre {
+    margin-top: 4%;
+    margin-left: 13.5%;
+    margin-right: 9%;
+    margin-bottom: -3%;
+}
+
+.opcoesMain {
+    margin-left: 12%;
+    margin-right: 9%;
+}
+
+.opcoesLazer {
+    font-size: 1.3vw;
+}
+
+.TituloOpcoesLazer {
+    font-size: 1.8vw;
+    margin-bottom: 2%;
+    text-shadow: 0.1em 0.1em rgba(51, 51, 51, 0.815);
+}
+
+.opcoes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.imagemOpcoes {
+    margin: 5px;
+    max-width: 100%;
+    height: 35vh;
+    width: 25vw;
+    object-fit: contain;
+    object-fit: cover;
+    border-radius: 10px; 
+    box-shadow: 3px 3px 3px rgba(41, 40, 40, 0.719); 
+}
+
+.textoOpcoes {
+    margin-top: 2%;
+    width: 40%;
+    text-align: center;
+}
+
+
+/*get_contact*/
+
+.textGetContact {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.msg {
+    font-size: 2vw;
+}
+
+.msgVoltar {
+    font-size: 1.5vw;
+    width: 100%;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.get_contact {
+    height: 90%;
+    padding-top: 5%;
+}
+
+/*Páginas dos gráficos*/
+
+
+.divBarras01 {
+    height: 80%;
+    width: 40%;
+    margin-top: 5%;
+    padding: 1%;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgba(41, 40, 40, 0.719); 
+}
+
+.divBarras02 {
+    height: 80%;
+    width: 40%;
+    margin-top: 5%;
+    padding: 1%;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgba(41, 40, 40, 0.719); 
+}
+
+.divBarras {
+    margin-top: 7%;
+    height: 90%;
+    width: 40%;
+    padding: 1%;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgba(41, 40, 40, 0.719); 
+}
+
+.pagGrafico {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 450px;
+    justify-content: space-around;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+/*Alimentaçao*/
+
+.textoAlimentacao {
+    width: 40%;
+    margin: 5%;
+}
+
+.topicosAlimentacao {
+    color: white;
+    margin-top: 2%;
+    margin-left: 3%;
+    font-size: 1.3vw;
+}
+
+.imagensAlimentacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.containerAlimentacao {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 3%;
+}
+
+/*Exercícios*/
+
+.textoExercicio {
+    width: 95%;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-bottom: 4%;
+}
+
+.Imagem_Texto {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
+}
+
+.beneficiosExercicio {
+    width: 95%;
+    margin: 2%;
+}
+
+.topicosExercicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    margin-left: 1.5%;
+    font-size: 1.3vw;
+}
+
+.imagensExercicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.textSideImage {
+    width: 40%;
+}
+
+.divBarrasExercicio {
+    height: 110%;
+    width: 70%;
+    padding: 1%;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgba(41, 40, 40, 0.719);
+}
+
+.divExercicioGrafico {
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    width: 95%;
+    padding-top: 5%;
+    margin-left: 2.5%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 12%;
+}
+
+/*Mapas*/
+
+.mapas {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+
+.mapa {
+    height: 60vh;
+    width: 60vw;
+    box-shadow: 3px 3px 3px rgba(41, 40, 40, 0.719); 
+}
+
+.tableParques {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    font-family: verdana;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+}
+
+.campos {
+    font-size: 1vw;
+    width: 5%;
+}
+
+.camposTD {
+    font-size: 1vw;
+}
+
+/*Saúde Mental*/
+
+.tituloSaudeMental {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.1em 0.1em #333;
+}
+
+.subTituloSaudeMental {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+/*Sistema imunológico*/
+
+.tituloSistemaImunologico {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.1em 0.1em #333;
+}
+
+.textoSI {
+    width: 95%;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-bottom: 4%;
+}
+
+.imagensSI {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.textSideImageSI {
+    width: 50%;
+    margin-top: 3%;
+}
+
+.downloadPDF_SI {
+    display: flex;
+}
+
+.link {
+    margin-top: 0.8%;
+    margin-left: 1%;
+}
+
+/**/
+
+.imagemRecomendacao {
+    width: 11.5%;
+}
+
+/*Hábitos*/
+
+.textoHabitos {
+    width: 95%;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-bottom: 4%;
+}
+
+.textoHabitosGR {
+    width: 40%;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-bottom: 4%;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendações Academias</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <style>
+        th{
+            border: 1px solid rgb(255, 255, 255);
+            padding: 1%;
+        }
+
+        td{
+            border: 1px solid rgb(255, 255, 255);
+            padding: 1%;
+        }
+    </style>
+</head>
+<body onload="iniciar();">
+    <header>
+        <nav>
+            <div class="logoG">
+                <div class="ImagemLogo"><img src="../static/imagens/logo_teste_3.png" height="80%", width="80%"/></div>
+                <a class="logo" href="/">Lykke</a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/conteudo">Conteúdo</a></li>
+                <li><a href="/contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main> 
+        <div class="subMain2">
+            <div class="TituloMain"><h1>Recomendações de academias (Brasília-DF)</h1></div>
+            <div class="mapas">
+                <div class="mapa" id="mapa" style=" border: solid white 2px;"></div>
+            </div>
+            <hr>
+            <table class="tableParques">
+                <tr>
+                   <th class="campos">Parque</th>
+                   <th class="campos">Bairro</th>
+                   <th class="campos">Endereço</th>
+                   <th class="campos">Telefone</th>
+                   <th class="campos">Horário de Funcionamento</th>
+                   <th class="campos">Avaliação</th>
+                   <th class="campos">Imagem</th>
+                </tr>
+                {{ imagens | safe }}
+            </table>
+        </div>
+    </main>
+</body>
+</html>
+
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+   <script>
+     function iniciar(){
+       var m = L.map('mapa').setView([-15.79343, -47.87627], 12);
+   
+       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '© OpenStreetMap'
+       }).addTo(m);
+   
+      var lykkeicon = L.icon({
+          iconUrl: '../static/imagens/lykke_icon.png',
+   
+          iconSize:     [50, 50],
+          popupAnchor:  [0, -20]
+      });
+   
+       {{ marcadores | safe }}
+       {{ popups | safe }}
+     }
+   </script>
