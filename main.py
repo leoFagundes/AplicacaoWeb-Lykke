@@ -23,9 +23,7 @@ class SQL:
     def __del__(self):
         self.cnx.close()
 
-
 app = Flask(__name__)
-
 
 @app.route('/')
 def home():
@@ -149,18 +147,8 @@ def recomendacaoParques():
     icone = '{icon: lykkeicon}'
     for idt, lat, lng, nome in cs:
         marcadores += 'var mk_{} = L.marker([{}, {}], {}).addTo(m);\n'.format(idt, lat, lng, icone)
-        popups += 'mk_{}.bindPopup("{}");'.format(idt, nome)
+        popups += 'mk_{}.bindPopup("<a href=\'\#{}\'>{}</a>");'.format(idt, 'i'+str(idt), nome)
     cs.close()
-
-    UPLOAD_FOLDER = '...\\static\\imagem_parque'
-    ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
-
-    app.config['MAX_CONTENT_LENGTH'] = 8 * 1024 * 1024
-    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-    def allowed_file(filename):
-        return '.' in filename and \
-               filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
     comando = "SELECT idt_parque, nome_parque, bairro, endereco, telefone, hr_funcionamento_parque, avaliacao_parque, foto_parque FROM parque;"
     imagens = ""
@@ -173,7 +161,7 @@ def recomendacaoParques():
         imagens += "<TD class='camposTD'>" + str(tel) + "</TD>\n"
         imagens += "<TD class='camposTD'>" + hrfunc + "</TD>\n"
         imagens += "<TD class='camposTD' style='padding-left: 3.5%'>" + str(avaliacao) + "</TD>\n"
-        imagens += "<TD class='imagemRecomendacao'><IMG class='imagem' SRC='" + foto + "'></TD>\n"
+        imagens += "<TD id='i" + str(idt) + "' class='imagemRecomendacao'><IMG class='imagem' SRC='" + foto + "'></TD>\n"
         imagens += "</TR>\n"
 
     return render_template("recomendacaoParques.html", marcadores = marcadores, popups = popups, imagens=imagens)
@@ -188,18 +176,8 @@ def recomendacaoRestaurantes():
     icone = '{icon: lykkeicon}'
     for idt, lat, lng, nome in cs:
         marcadores += 'var mk_{} = L.marker([{}, {}], {}).addTo(m);\n'.format(idt, lat, lng, icone)
-        popups += 'mk_{}.bindPopup("{}");'.format(idt, nome)
+        popups += 'mk_{}.bindPopup("<a href=\'\#{}\'>{}</a>");'.format(idt, 'i'+str(idt), nome)
     cs.close()
-
-    UPLOAD_FOLDER = '...\\static\\imagem_restaurante'
-    ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
-
-    app.config['MAX_CONTENT_LENGTH'] = 8 * 1024 * 1024
-    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-    def allowed_file(filename):
-        return '.' in filename and \
-               filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
     comando = "SELECT idt_restaurante, nome_rest, bairro, endereco, telefone, hr_funcionamento_rest, avaliacao_rest, foto_rest FROM restaurante;"
     imagens = ""
@@ -212,7 +190,7 @@ def recomendacaoRestaurantes():
         imagens += "<TD class='camposTD'>" + str(tel) + "</TD>\n"
         imagens += "<TD class='camposTD'>" + hrfunc + "</TD>\n"
         imagens += "<TD class='camposTD' style='padding-left: 3.5%'>" + str(avaliacao) + "</TD>\n"
-        imagens += "<TD class='imagemRecomendacao'><IMG class='imagem' SRC='" + foto + "'></TD>\n"
+        imagens += "<TD id='i" + str(idt) + "' class='imagemRecomendacao'><IMG class='imagem' SRC='" + foto + "'></TD>\n"
         imagens += "</TR>\n"
 
 
@@ -228,18 +206,8 @@ def recomendacaoAcademias():
     icone = '{icon: lykkeicon}'
     for idt, lat, lng, nome in cs:
         marcadores += 'var mk_{} = L.marker([{}, {}], {}).addTo(m);\n'.format(idt, lat, lng, icone)
-        popups += 'mk_{}.bindPopup("{}");'.format(idt, nome)
+        popups += 'mk_{}.bindPopup("<a href=\'\#{}\'>{}</a>");'.format(idt, 'i'+str(idt), nome)
     cs.close()
-
-    UPLOAD_FOLDER = '...\\static\\imagem_academia'
-    ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
-
-    app.config['MAX_CONTENT_LENGTH'] = 8 * 1024 * 1024
-    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-    def allowed_file(filename):
-        return '.' in filename and \
-               filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
     comando = "SELECT idt_acad, nome_acad, bairro, endereco, telefone, hr_funcionamento_acad, avaliacao_acad, foto_acad FROM academia;"
     imagens = ""
@@ -252,7 +220,7 @@ def recomendacaoAcademias():
         imagens += "<TD class='camposTD'>" + str(tel) + "</TD>\n"
         imagens += "<TD class='camposTD'>" + hrfunc + "</TD>\n"
         imagens += "<TD class='camposTD' style='padding-left: 3.5%'>" + str(avaliacao) + "</TD>\n"
-        imagens += "<TD class='imagemRecomendacao'><IMG class='imagem' SRC='" + foto + "'></TD>\n"
+        imagens += "<TD id='i" + str(idt) + "' class='imagemRecomendacao'><IMG class='imagem' SRC='" + foto + "'></TD>\n"
         imagens += "</TR>\n"
 
     return render_template("recomendacaoAcademias.html", marcadores = marcadores, popups = popups, imagens=imagens)
@@ -267,18 +235,8 @@ def recomendacaoCultural():
     icone = '{icon: lykkeicon}'
     for idt, lat, lng, nome in cs:
         marcadores += 'var mk_{} = L.marker([{}, {}], {}).addTo(m);\n'.format(idt, lat, lng, icone)
-        popups += 'mk_{}.bindPopup("{}");'.format(idt, nome)
+        popups += 'mk_{}.bindPopup("<a href=\'\#{}\'>{}</a>");'.format(idt, 'i'+str(idt), nome)
     cs.close()
-
-    UPLOAD_FOLDER = '...\\static\\imagem_cultural'
-    ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
-
-    app.config['MAX_CONTENT_LENGTH'] = 8 * 1024 * 1024
-    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-    def allowed_file(filename):
-        return '.' in filename and \
-               filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
     comando = "SELECT idt_cultural, nome_cult, bairro, endereco, telefone, hr_funcionamento_cult, avaliacao_cult, foto_cult FROM cultural;"
     imagens = ""
@@ -291,7 +249,7 @@ def recomendacaoCultural():
         imagens += "<TD class='camposTD'>" + str(tel) + "</TD>\n"
         imagens += "<TD class='camposTD'>" + hrfunc + "</TD>\n"
         imagens += "<TD class='camposTD' style='padding-left: 3.5%'>" + str(avaliacao) + "</TD>\n"
-        imagens += "<TD class='imagemRecomendacao'><IMG class='imagem' SRC='" + foto + "'></TD>\n"
+        imagens += "<TD id='i" + str(idt) + "'  class='imagemRecomendacao'><IMG class='imagem' SRC='" + foto + "'></TD>\n"
         imagens += "</TR>\n"
 
     return render_template("recomendacaoCultural.html", marcadores = marcadores, popups = popups, imagens=imagens)
