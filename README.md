@@ -47,5 +47,5 @@ e em seguida clicar em "Clique aqui para conferir nossas recomendações"
 <br>
 Abre uma página com um mapa e suas informações sobre restaurantes saudáveis que tem perto de onde eu moro, todas as longitudes, latitudes, nomes, endereços e entre outros, foi pego diretamente do banco de dados.
 
-<br>
+<br><br>
 Foi uma experiência bem bacana, aprendi bastante durante o projeto. 
