@@ -15,6 +15,37 @@ Escolhemos o tema monocromático azul claro como na imagem abaixo:
     <img src='./imagens_readme/home.png' alt='Imagem Home' width='500px' heigth='400px'/>
 </div>
 <br>
-Todos os gráficos, mapas e tabelas que tem no site estão vindo diretamente do banco de dados
+Clicando em "Sobre" iremos para uma página que fala um pouco sobre o Lykke e mostra os integrantes(criadores) do projeto.
+<br><br>
+<div align='center'>
+    <img src='./imagens_readme/sobre.png' alt='Imagem Home' width='500px' heigth='400px'/>
+</div>
+<br>
+Clicanddo na parte de "Contato" vamos para uma página onde a pessoa irá informar seu nome, o email e uma mensagem que será redirecionada para o banco de dados. (A data em qeu a pessoa mandou vai ficar salva auitomaticamente lá também).
+<br><br>
+<div align='center'>
+    <img src='./imagens_readme/contato.png' alt='Imagem Home' width='500px' heigth='400px'/>
+</div>
+<br>
+Clicando na parte de "Conteúdo" vamos para a página que contém os conteúdos do nosso site.
+<br><br>
+<div align='center'>
+    <img src='./imagens_readme/conteudos.png' alt='Imagem Home' width='500px' heigth='400px'/>
+</div>
+<br>
+Cada conteúdo é tem sua matéria, seus gráficos e uma opção em que podemos conferir algumas recomendações relacionadas ao conteúdo em específico. Por exemplo vamos clicar em alimentação saudável.
+<br><br>
+<div align='center'>
+    <img src='./imagens_readme/alimentacao_saudavel.png' alt='Imagem Home' width='500px' heigth='400px'/>
+</div>
+<br>
+e em seguida clicar em "Clique aqui para conferir nossas recomendações"
+<br><br>
+<div align='center'>
+    <img src='./imagens_readme/recomendacoes.png' alt='Imagem Home' width='500px' heigth='400px'/>
+</div>
+<br>
+Abre uma página com um mapa e suas informações sobre restaurantes saudáveis que tem perto de onde eu moro, todas as longitudes, latitudes, nomes, endereços e entre outros, foi pego diretamente do banco de dados.
+
 <br>
 Foi uma experiência bem bacana, aprendi bastante durante o projeto. 
