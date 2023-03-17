@@ -21,7 +21,7 @@ Clicando em "Sobre" iremos para uma página que fala um pouco sobre o Lykke e mo
     <img src='./imagens_readme/sobre.png' alt='Imagem Home' width='500px' heigth='400px'/>
 </div>
 <br>
-Clicanddo na parte de "Contato" vamos para uma página onde a pessoa irá informar seu nome, o email e uma mensagem que será redirecionada para o banco de dados. (A data em qeu a pessoa mandou vai ficar salva auitomaticamente lá também).
+Clicanddo na parte de "Contato" vamos para uma página onde a pessoa irá informar seu nome, o email e uma mensagem que será redirecionada para o banco de dados. (A data em que a pessoa mandou vai ficar salva auitomaticamente lá também).
 <br><br>
 <div align='center'>
     <img src='./imagens_readme/contato.png' alt='Imagem Home' width='500px' heigth='400px'/>
